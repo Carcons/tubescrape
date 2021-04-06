@@ -65,7 +65,7 @@ public class TubeScraper {
                     String videosIds[] = pageSource.split(Pattern.quote("{\"videoRenderer\":{\"videoId\":\""));
                     String videosTitles[] = pageSource.split(Pattern.quote("\"title\":{\"runs\":[{\"text\":\""));
 
-                    for (int i = 0; i < videosIds.length; i++) {
+                    for (int i = 1; i < videosIds.length - 1; i++) {
 
                         TubeMedia media = new TubeMedia();
 
