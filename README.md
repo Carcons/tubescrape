@@ -1,7 +1,7 @@
 # tubescrape
 A java library that scrapes the youtube-search webpage.
 
-Download source code and compile jar classes:
+Download source code and compile java classes:
 javac carcons/tubescrape/*.java
 
 Then create the jar library:
