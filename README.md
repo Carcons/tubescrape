@@ -38,3 +38,13 @@ public class App {
     }
 }
 ```
+This is the function that allows you to use the searched results
+
+```java
+new TubeScraper(query, new ScrapeOnFinishListener() {
+    @Override
+    public void OnFinish(ArrayList<TubeMedia> arg0) {
+        //The arg0 arraylist contains the finded media.
+    }
+}).scrape();
+```
