@@ -15,21 +15,26 @@ import carcons.tubescrape.TubeMedia;
 import carcons.tubescrape.TubeScraper;
 import java.util.ArrayList;
 import java.util.Scanner;
+
 public class App {
-    public static void main(String[] args) throws Exception {
-        Scanner s = new Scanner(System.in);
-        System.out.print("Search on youtube: ");
-        String query = s.nextLine();
-        s.close();
-        new TubeScraper(query,new ScrapeOnFinishListener(){
-            @Override
-            public void OnFinish(ArrayList<TubeMedia> arg0) {
-                System.out.println("Found: " + arg0.size() + " elements.");
-                for(TubeMedia m : arg0){
-                    System.out.print("Title: " + m.getTitle() + "\nUrl: " + m.getYouTubeUrl() + "\n\n");
-                }            
-            }
-        }).scrape();
+    public static void main(String[] args) {
+        try {
+            Scanner s = new Scanner(System.in);
+            System.out.print("Search on youtube: ");
+            String query = s.nextLine();
+            s.close();
+            new TubeScraper(query, new ScrapeOnFinishListener() {
+                @Override
+                public void OnFinish(ArrayList<TubeMedia> arg0) {
+                    System.out.println("Found: " + arg0.size() + " elements.");
+                    for (TubeMedia m : arg0) {
+                        System.out.print("Title: " + m.getTitle() + "\nUrl: " + m.getYouTubeUrl() + "\n\n");
+                    }
+                }
+            }).scrape();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
     }
 }
 ```
