@@ -38,7 +38,7 @@ public class App {
     }
 }
 ```
-This is the function that allows you to use the searched results
+The OnFinish method allows you to use the searched results
 
 ```java
 new TubeScraper(query, new ScrapeOnFinishListener() {
