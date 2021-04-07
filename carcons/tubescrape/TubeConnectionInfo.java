@@ -43,8 +43,7 @@ public class TubeConnectionInfo {
         urlc.addRequestProperty(userAgent[0], userAgent[1]);
         urlc.setRequestProperty(cookie[0], cookie[1]);
 
-        BufferedInputStream buffer;
-        buffer = new BufferedInputStream(urlc.getInputStream());
+        BufferedInputStream buffer = new BufferedInputStream(urlc.getInputStream());
 
         StringBuilder builder = new StringBuilder();
         byte[] by = new byte[1024];
